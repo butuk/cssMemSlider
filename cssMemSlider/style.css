@@ -1,0 +1,271 @@
+html, body, div, p, img, figure, figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+body {
+  font-size: 10px;
+  font-family: sans-serif;
+  line-height: 1;
+}
+
+figcaption, figure, section, div {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*[type=radio] {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  max-width: 120rem;
+  margin: 3vh auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 700%;
+  height: 54vw;
+}
+@media screen and (max-width: 600px) {
+  .slider {
+    height: 70vw;
+  }
+}
+
+figure {
+  width: 14.2857142857%;
+  transition: all 0.6s ease-in-out;
+}
+
+figcaption {
+  font-size: 3vw;
+  position: absolute;
+  left: 0;
+  bottom: 0.3rem;
+  transition: all 0.6s ease;
+}
+@media screen and (max-width: 600px) {
+  figcaption {
+    width: 80vw;
+    font-size: 1.6rem;
+    text-align: center;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+.button:hover > svg > circle {
+  fill: red;
+  stroke: red;
+}
+@media screen and (max-width: 600px) {
+  .button {
+    bottom: 2.4rem;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+#choise1:checked ~ #slide1 {
+  margin-left: 0;
+}
+
+#choise2:checked ~ #slide1 {
+  margin-left: -80vw;
+}
+
+#choise3:checked ~ #slide1 {
+  margin-left: -160vw;
+}
+
+#choise4:checked ~ #slide1 {
+  margin-left: -240vw;
+}
+
+#choise5:checked ~ #slide1 {
+  margin-left: -320vw;
+}
+
+#choise6:checked ~ #slide1 {
+  margin-left: -400vw;
+}
+
+#choise7:checked ~ #slide1 {
+  margin-left: -480vw;
+}
+
+#choise1:checked ~ figure > #caption1 {
+  opacity: 1;
+}
+
+#choise2:checked ~ figure > #caption2 {
+  opacity: 1;
+}
+
+#choise3:checked ~ figure > #caption3 {
+  opacity: 1;
+}
+
+#choise4:checked ~ figure > #caption4 {
+  opacity: 1;
+}
+
+#choise5:checked ~ figure > #caption5 {
+  opacity: 1;
+}
+
+#choise6:checked ~ figure > #caption6 {
+  opacity: 1;
+}
+
+#choise7:checked ~ figure > #caption7 {
+  opacity: 1;
+}
+
+#choise1:not(:checked) ~ figure > #caption1 {
+  opacity: 0;
+}
+
+#choise2:not(:checked) ~ figure > #caption2 {
+  opacity: 0;
+}
+
+#choise3:not(:checked) ~ figure > #caption3 {
+  opacity: 0;
+}
+
+#choise4:not(:checked) ~ figure > #caption4 {
+  opacity: 0;
+}
+
+#choise5:not(:checked) ~ figure > #caption5 {
+  opacity: 0;
+}
+
+#choise6:not(:checked) ~ figure > #caption6 {
+  opacity: 0;
+}
+
+#choise7:not(:checked) ~ figure > #caption7 {
+  opacity: 0;
+}
+
+#btn1 {
+  transform: translateX(-240px);
+}
+@media screen and (max-width: 600px) {
+  #btn1 {
+    right: 50%;
+    transform: translateX(calc(50% - 120px));
+  }
+}
+
+#btn2 {
+  transform: translateX(-200px);
+}
+@media screen and (max-width: 600px) {
+  #btn2 {
+    right: 50%;
+    transform: translateX(calc(50% - 80px));
+  }
+}
+
+#btn3 {
+  transform: translateX(-160px);
+}
+@media screen and (max-width: 600px) {
+  #btn3 {
+    right: 50%;
+    transform: translateX(calc(50% - 40px));
+  }
+}
+
+#btn4 {
+  transform: translateX(-120px);
+}
+@media screen and (max-width: 600px) {
+  #btn4 {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+#btn5 {
+  transform: translateX(-80px);
+}
+@media screen and (max-width: 600px) {
+  #btn5 {
+    right: 50%;
+    transform: translateX(calc(50% + 40px));
+  }
+}
+
+#btn6 {
+  transform: translateX(-40px);
+}
+@media screen and (max-width: 600px) {
+  #btn6 {
+    right: 50%;
+    transform: translateX(calc(50% + 80px));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #btn7 {
+    right: 50%;
+    transform: translateX(calc(50% + 120px));
+  }
+}
+
+#choise1:checked ~ #btn1 > svg > circle {
+  fill: none;
+}
+
+#choise2:checked ~ #btn2 > svg > circle {
+  fill: none;
+}
+
+#choise3:checked ~ #btn3 > svg > circle {
+  fill: none;
+}
+
+#choise4:checked ~ #btn4 > svg > circle {
+  fill: none;
+}
+
+#choise5:checked ~ #btn5 > svg > circle {
+  fill: none;
+}
+
+#choise6:checked ~ #btn6 > svg > circle {
+  fill: none;
+}
+
+#choise7:checked ~ #btn7 > svg > circle {
+  fill: none;
+}
+
+/*# sourceMappingURL=style.css.map */
