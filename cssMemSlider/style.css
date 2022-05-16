@@ -1,12 +1,7 @@
-*[type=radio] {
-  display: none;
-}
-
 html, body, div, p, img, figure, figcaption {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   vertical-align: baseline;
 }
 
@@ -20,12 +15,12 @@ figcaption, figure, section, div {
   display: block;
 }
 
-figcaption {
-  font-size: 2rem;
-}
-
 * {
   box-sizing: border-box;
+}
+
+*[type=radio] {
+  display: none;
 }
 
 .container {
@@ -41,40 +36,35 @@ figcaption {
   overflow: hidden;
 }
 
-.slider__wrapper {
-  height: 90vh;
-}
-
 .slider {
   display: flex;
   width: 700%;
-}
-
-.navigation {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: flex;
+  height: 54vw;
 }
 
 figure {
   width: 14.2857142857%;
-  transition: all 0.6s ease;
+  transition: all 0.6s ease-in-out;
 }
 
 figcaption {
+  font-size: 3vw;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 0.3rem;
+  transition: all 0.6s ease;
 }
 
 .button {
-  height: 30px;
-  width: 30px;
-  margin: 5px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   cursor: pointer;
-  background: black;
-  border-radius: 30px;
+}
+.button:hover > svg > circle {
+  fill: red;
+  stroke: red;
 }
 
 img {
@@ -110,59 +100,111 @@ img {
 }
 
 #choise1:checked ~ figure > #caption1 {
-  visibility: visible;
+  opacity: 1;
 }
 
 #choise2:checked ~ figure > #caption2 {
-  visibility: visible;
+  opacity: 1;
 }
 
 #choise3:checked ~ figure > #caption3 {
-  visibility: visible;
+  opacity: 1;
 }
 
 #choise4:checked ~ figure > #caption4 {
-  visibility: visible;
+  opacity: 1;
 }
 
 #choise5:checked ~ figure > #caption5 {
-  visibility: visible;
+  opacity: 1;
 }
 
 #choise6:checked ~ figure > #caption6 {
-  visibility: visible;
+  opacity: 1;
 }
 
 #choise7:checked ~ figure > #caption7 {
-  visibility: visible;
+  opacity: 1;
 }
 
 #choise1:not(:checked) ~ figure > #caption1 {
-  visibility: hidden;
+  opacity: 0;
 }
 
 #choise2:not(:checked) ~ figure > #caption2 {
-  visibility: hidden;
+  opacity: 0;
 }
 
 #choise3:not(:checked) ~ figure > #caption3 {
-  visibility: hidden;
+  opacity: 0;
 }
 
 #choise4:not(:checked) ~ figure > #caption4 {
-  visibility: hidden;
+  opacity: 0;
 }
 
 #choise5:not(:checked) ~ figure > #caption5 {
-  visibility: hidden;
+  opacity: 0;
 }
 
 #choise6:not(:checked) ~ figure > #caption6 {
-  visibility: hidden;
+  opacity: 0;
 }
 
 #choise7:not(:checked) ~ figure > #caption7 {
-  visibility: hidden;
+  opacity: 0;
+}
+
+#btn1 {
+  transform: translateX(-240px);
+}
+
+#btn2 {
+  transform: translateX(-200px);
+}
+
+#btn3 {
+  transform: translateX(-160px);
+}
+
+#btn4 {
+  transform: translateX(-120px);
+}
+
+#btn5 {
+  transform: translateX(-80px);
+}
+
+#btn6 {
+  transform: translateX(-40px);
+}
+
+#choise1:checked ~ #btn1 > svg > circle {
+  fill: none;
+}
+
+#choise2:checked ~ #btn2 > svg > circle {
+  fill: none;
+}
+
+#choise3:checked ~ #btn3 > svg > circle {
+  fill: none;
+}
+
+#choise4:checked ~ #btn4 > svg > circle {
+  fill: none;
+}
+
+#choise5:checked ~ #btn5 > svg > circle {
+  fill: none;
+}
+
+#choise6:checked ~ #btn6 > svg > circle {
+  fill: none;
+}
+
+#choise7:checked ~ #btn7 > svg > circle {
+  fill: none;
 }
 
 /*# sourceMappingURL=style.css.map */
