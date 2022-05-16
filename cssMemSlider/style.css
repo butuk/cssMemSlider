@@ -1,3 +1,7 @@
+*[type=radio] {
+  display: none;
+}
+
 html, body, div, p, img, figure, figcaption {
   margin: 0;
   padding: 0;
@@ -24,23 +28,141 @@ figcaption {
   box-sizing: border-box;
 }
 
-/*body {
-  width: 100%;
-  height: 100%;
-}
-
 .container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   width: 80vw;
   max-width: 120rem;
   display: flex;
   justify-self: center;
   flex-direction: column;
   margin: 2rem auto;
-}*/
-/*
-.slider__wrapper {
-  display: flex;
   overflow: hidden;
-}*/
+}
+
+.slider__wrapper {
+  height: 90vh;
+}
+
+.slider {
+  display: flex;
+  width: 700%;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+
+figure {
+  width: 14.2857142857%;
+  transition: all 0.6s ease;
+}
+
+figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.button {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  cursor: pointer;
+  background: black;
+  border-radius: 30px;
+}
+
+img {
+  width: 100%;
+}
+
+#choise1:checked ~ #slide1 {
+  margin-left: 0;
+}
+
+#choise2:checked ~ #slide1 {
+  margin-left: -80vw;
+}
+
+#choise3:checked ~ #slide1 {
+  margin-left: -160vw;
+}
+
+#choise4:checked ~ #slide1 {
+  margin-left: -240vw;
+}
+
+#choise5:checked ~ #slide1 {
+  margin-left: -320vw;
+}
+
+#choise6:checked ~ #slide1 {
+  margin-left: -400vw;
+}
+
+#choise7:checked ~ #slide1 {
+  margin-left: -480vw;
+}
+
+#choise1:checked ~ figure > #caption1 {
+  visibility: visible;
+}
+
+#choise2:checked ~ figure > #caption2 {
+  visibility: visible;
+}
+
+#choise3:checked ~ figure > #caption3 {
+  visibility: visible;
+}
+
+#choise4:checked ~ figure > #caption4 {
+  visibility: visible;
+}
+
+#choise5:checked ~ figure > #caption5 {
+  visibility: visible;
+}
+
+#choise6:checked ~ figure > #caption6 {
+  visibility: visible;
+}
+
+#choise7:checked ~ figure > #caption7 {
+  visibility: visible;
+}
+
+#choise1:not(:checked) ~ figure > #caption1 {
+  visibility: hidden;
+}
+
+#choise2:not(:checked) ~ figure > #caption2 {
+  visibility: hidden;
+}
+
+#choise3:not(:checked) ~ figure > #caption3 {
+  visibility: hidden;
+}
+
+#choise4:not(:checked) ~ figure > #caption4 {
+  visibility: hidden;
+}
+
+#choise5:not(:checked) ~ figure > #caption5 {
+  visibility: hidden;
+}
+
+#choise6:not(:checked) ~ figure > #caption6 {
+  visibility: hidden;
+}
+
+#choise7:not(:checked) ~ figure > #caption7 {
+  visibility: hidden;
+}
 
 /*# sourceMappingURL=style.css.map */
